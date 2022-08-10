@@ -139,24 +139,34 @@ RUN bash $INST_SCRIPTS/virtualgl/install_virtualgl.sh && rm -rf $INST_SCRIPTS/vi
 
 
 ###   background image are edited
-COPY src/common/resources/images/img.png /usr/share/kasmvnc/www/app/images/icons/kasm_logo.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/kasm_logo.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_192x192.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_32x32.png
+COPY src/common/resources/images/android-icon-16x16.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_16x16.png
 COPY src/common/resources/images/939716.jpg /usr/share/kasmvnc/www/app/images/splash.jpg
-COPY src/common/resources/images/img.png /usr/share/kasmvnc/www/dist/images/782e6b34fd46a00744786246a454ed11.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/dist/images/782e6b34fd46a00744786246a454ed11.png
 COPY src/common/resources/images/939716.jpg /usr/share/kasmvnc/www/dist/images/3082090afb2b2a343ae20bd52c2e16bb.jpg
 
 
+### vnc html change 
+RUN sed -i 's/"KasmVNC"/"Cloud"/g' /usr/share/kasmvnc/www/dist/main.bundle.js
+#COPY src/common/resources/source/index.html /usr/share/kasmvnc/www/index.html
+
+
+
+
 ### Create user and home directory for base images that don't already define it
-RUN (groupadd -g 1000 kishore \
-    && useradd -M -u 1000 -g 1000 -p sakMo8mExiZ6Q kishore \
-    && usermod -a -G kishore kishore) ; exit 0
+RUN (groupadd -g 1000 user \
+    && useradd -M -u 1000 -g 1000 -p saqL3DINWgljo user \
+    && usermod -a -G user user) ; exit 0
 
 RUN apt-get update \
     && apt-get install -y sudo \
-    && useradd -m -d /home/kasm-user -p sakMo8mExiZ6Q -s /bin/bash kasm-user \
-    && echo 'kasm-user ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
+    && useradd -m -d /home/sysadmin -p saK0WIeQPU2IY -s /bin/bash sysadmin \
+    && echo 'sysadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
     && rm -rf /var/lib/apt/list/*
 
-ENV HOME /home/kishore
+ENV HOME /home/user
 WORKDIR $HOME
 RUN mkdir -p $HOME && chown -R 1000:0 $HOME
 

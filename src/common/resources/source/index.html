@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang=en class=noVNC_loading>
+<title>Cloud</title>
+<meta charset=utf-8>
+<link rel=icon sizes=16x16 type=image/png href=app/images/icons/368_kasm_logo_only_16x16.png>
+<link rel=icon sizes=24x24 type=image/png href=app/images/icons/368_kasm_logo_only_24x24.png>
+<link rel=icon sizes=32x32 type=image/png href=app/images/icons/368_kasm_logo_only_32x32.png>
+<link rel=icon sizes=48x48 type=image/png href=app/images/icons/368_kasm_logo_only_48x48.png>
+<link rel=icon sizes=60x60 type=image/png href=app/images/icons/368_kasm_logo_only_60x60.png>
+<link rel=icon sizes=64x64 type=image/png href=app/images/icons/368_kasm_logo_only_64x64.png>
+<link rel=icon sizes=72x72 type=image/png href=app/images/icons/368_kasm_logo_only_72x72.png>
+<link rel=icon sizes=76x76 type=image/png href=app/images/icons/368_kasm_logo_only_76x76.png>
+<link rel=icon sizes=96x96 type=image/png href=app/images/icons/368_kasm_logo_only_96x96.png>
+<link rel=icon sizes=120x120 type=image/png href=app/images/icons/368_kasm_logo_only_120x120.png>
+<link rel=icon sizes=144x144 type=image/png href=app/images/icons/368_kasm_logo_only_144x144.png>
+<link rel=icon sizes=152x152 type=image/png href=app/images/icons/368_kasm_logo_only_152x152.png>
+<link rel=icon sizes=192x192 type=image/png href=app/images/icons/368_kasm_logo_only_192x192.png>
+<link rel=icon sizes=16x16 type=image/png href=app/images/icons/368_kasm_logo_only_16x16.png>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+<link rel=apple-touch-icon sizes=60x60 type=image/png href=app/images/icons/368_kasm_logo_only_60x60.png>
+<link rel=apple-touch-icon sizes=76x76 type=image/png href=app/images/icons/368_kasm_logo_only_76x76.png>
+<link rel=apple-touch-icon sizes=120x120 type=image/png href=app/images/icons/368_kasm_logo_only_120x120.png>
+<link rel=apple-touch-icon sizes=152x152 type=image/png href=app/images/icons/368_kasm_logo_only_152x152.png>
+<link href=dist/style.bundle.css rel=stylesheet>
+<div id=noVNC_fallback_error class=noVNC_center>
+    <div>
+        <div>noVNC encountered an error:</div><br>
+        <div id=noVNC_fallback_errormsg></div>
+    </div>
+</div>
+<div id=noVNC_connection_stats>Loading statistics...</div>
+<div id=noVNC_control_bar_anchor class=noVNC_vcenter>
+    <div id=noVNC_control_bar>
+        <div id=noVNC_control_bar_handle title="Hide/Show the control bar">
+            <div></div>
+        </div>
+        <div class=noVNC_scroll>
+            <h1 class=noVNC_logo><img src=app/images/icons/368_kasm_logo_only_24x24.png></h1><input type=image alt=Drag
+                src=app/images/drag.svg id=noVNC_view_drag_button class="noVNC_button noVNC_hidden"
+                title="Move/Drag Viewport">
+            <div id=noVNC_mobile_buttons><input type=image alt=Keyboard src=app/images/keyboard.svg
+                    id=noVNC_keyboard_button class=noVNC_button title="Show Keyboard"></div><input type=image
+                alt="Extra keys" src=app/images/toggleextrakeys.svg id=noVNC_toggle_extra_keys_button class=noVNC_button
+                title="Show Extra Keys">
+            <div class=noVNC_vcenter>
+                <div id=noVNC_modifiers class=noVNC_panel><input type=image alt=Ctrl src=app/images/ctrl.svg
+                        id=noVNC_toggle_ctrl_button class=noVNC_button title="Toggle Ctrl"> <input type=image alt=Alt
+                        src=app/images/alt.svg id=noVNC_toggle_alt_button class=noVNC_button title="Toggle Alt"> <input
+                        type=image alt=Windows src=app/images/windows.svg id=noVNC_toggle_windows_button
+                        class=noVNC_button title="Toggle Windows"> <input type=image alt=Tab src=app/images/tab.svg
+                        id=noVNC_send_tab_button class=noVNC_button title="Send Tab"> <input type=image alt=Esc
+                        src=app/images/esc.svg id=noVNC_send_esc_button class=noVNC_button title="Send Escape"> <input
+                        type=image alt=Ctrl+Alt+Del src=app/images/ctrlaltdel.svg id=noVNC_send_ctrl_alt_del_button
+                        class=noVNC_button title="Send Ctrl-Alt-Del"></div>
+            </div><input type=image alt=Shutdown/Reboot src=app/images/power.svg id=noVNC_power_button
+                class=noVNC_button title=Shutdown/Reboot...>
+            <div class=noVNC_vcenter>
+                <div id=noVNC_power class=noVNC_panel>
+                    <div class=noVNC_heading><svg alt="" xmlns=http://www.w3.org/2000/svg width=25 height=25 id=svg2
+                            version=1.1>
+                            <g id=layer1 transform="translate(0 -1027.362)" stroke-linecap=round stroke-miterlimit=4
+                                stroke-dasharray=none stroke-opacity=1>
+                                <path
+                                    style=line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1
+                                    d="M9 6.818C6.342 8.121 4.5 10.85 4.5 14c0 4.407 3.594 8 8 8 4.406 0 8-3.593 8-8 0-3.15-1.842-5.879-4.5-7.182v2.307A5.979 5.979 0 0118.5 14c0 3.326-2.674 6-6 6s-6-2.674-6-6c0-2.015.986-3.788 2.5-4.875V6.818z"
+                                    transform="translate(0 1027.362)" id=path6140 color=#000 font-style=normal
+                                    font-variant=normal font-weight=400 font-stretch=normal font-size=medium
+                                    font-family=sans-serif text-decoration=none letter-spacing=normal
+                                    word-spacing=normal direction=ltr writing-mode=lr-tb baseline-shift=baseline
+                                    text-anchor=start clip-rule=nonzero display=inline overflow=visible
+                                    visibility=visible opacity=1 color-interpolation=sRGB
+                                    color-interpolation-filters=linearRGB fill=#fff fill-opacity=1 fill-rule=nonzero
+                                    stroke=none stroke-width=2 stroke-linejoin=round stroke-dashoffset=0
+                                    color-rendering=auto image-rendering=auto shape-rendering=auto
+                                    text-rendering=auto />
+                                <path d="M12.5 1031.884v6.478" id=path6142 fill=none fill-rule=evenodd stroke=#fff
+                                    stroke-width=3 stroke-linejoin=miter />
+                            </g>
+                        </svg> Power</div><input type=button id=noVNC_shutdown_button value=Shutdown> <input type=button
+                        id=noVNC_reboot_button value=Reboot> <input type=button id=noVNC_reset_button value=Reset>
+                </div>
+            </div><input type=image alt=Clipboard src=app/images/clipboard.svg id=noVNC_clipboard_button
+                class=noVNC_button title=Clipboard>
+            <div class=noVNC_vcenter>
+                <div id=noVNC_clipboard class=noVNC_panel>
+                    <div class=noVNC_heading><svg alt="" xmlns=http://www.w3.org/2000/svg width=25 height=25 id=svg2
+                            version=1.1>
+                            <g id=layer1 transform="translate(0 -1027.362)" fill=none stroke=#fff stroke-linecap=round
+                                stroke-miterlimit=4 stroke-dasharray=none>
+                                <path
+                                    d="M9 1033.362H6c-.554 0-1 .446-1 1v13c0 .554.446 1 1 1h13c.554 0 1-.446 1-1v-13c0-.554-.446-1-1-1h-3"
+                                    id=rect6083 opacity=1 fill-opacity=1 stroke-width=2 stroke-linejoin=round
+                                    stroke-dashoffset=0 stroke-opacity=1 />
+                                <rect id=rect6085 width=7 height=4 x=9 y=1031.362 ry=1 opacity=1 fill-opacity=1
+                                    stroke-width=2 stroke-linejoin=round stroke-dashoffset=0 stroke-opacity=1 />
+                                <path d="M8.507 1038.862h8" id=path6087 fill-rule=evenodd stroke-width=1
+                                    stroke-linejoin=miter stroke-opacity=.502 />
+                                <path d="M8.507 1041.862h4" id=path6089 fill-rule=evenodd stroke-width=1
+                                    stroke-linejoin=miter stroke-opacity=.502 />
+                                <path d="M8.507 1044.862h6" id=path6091 fill-rule=evenodd stroke-width=1
+                                    stroke-linejoin=miter stroke-opacity=.502 />
+                            </g>
+                        </svg> Clipboard</div><textarea id=noVNC_clipboard_text rows=5></textarea><br><input
+                        id=noVNC_clipboard_clear_button type=button value=Clear class=noVNC_submit>
+                </div>
+            </div><input type=image alt=Fullscreen src=app/images/fullscreen.svg id=noVNC_fullscreen_button
+                class="noVNC_button noVNC_hidden" title=Fullscreen> <input type=image alt=Settings
+                src=app/images/settings.svg id=noVNC_settings_button class=noVNC_button title=Settings>
+            <div class=noVNC_vcenter>
+                <div id=noVNC_settings class=noVNC_panel>
+                    <ul>
+                        <li class=noVNC_heading><svg alt="" xmlns=http://www.w3.org/2000/svg width=25 height=25 id=svg2
+                                version=1.1>
+                                <g id=layer1 transform="translate(0 -1027.362)">
+                                    <path
+                                        d="M11 3v2.16a7.5 7.5 0 00-2.633 1.086L6.844 4.723l-2.121 2.12L6.248 8.37A7.5 7.5 0 005.152 11H3v3h2.16a7.5 7.5 0 001.086 2.633l-1.523 1.523 2.12 2.121 1.526-1.525A7.5 7.5 0 0011 19.848V22h3v-2.16a7.5 7.5 0 002.633-1.086l1.523 1.523 2.121-2.12-1.525-1.526A7.5 7.5 0 0019.848 14H22v-3h-2.16a7.5 7.5 0 00-1.086-2.633l1.523-1.523-2.12-2.121-1.526 1.525A7.5 7.5 0 0014 5.152V3h-3zm1.5 7a2.5 2.5 0 012.5 2.5 2.5 2.5 0 01-2.5 2.5 2.5 2.5 0 01-2.5-2.5 2.5 2.5 0 012.5-2.5z"
+                                        transform="translate(0 1027.362)" id=rect4967 opacity=1 fill=#fff fill-opacity=1
+                                        stroke=none stroke-width=1 stroke-linecap=round stroke-linejoin=miter
+                                        stroke-miterlimit=4 stroke-dasharray=none stroke-dashoffset=0
+                                        stroke-opacity=1 />
+                                </g>
+                            </svg> Settings
+                        <li><label><input id=noVNC_setting_shared type=checkbox> Shared Mode</label>
+                        <li><label><input id=noVNC_setting_view_only type=checkbox> View Only</label>
+                        <li><label><input id=noVNC_setting_clipboard_up type=checkbox> Clipboard Up</label>
+                        <li><label><input id=noVNC_setting_clipboard_down type=checkbox> Clipboard Down</label>
+                        <li><label><input id=noVNC_setting_clipboard_seamless type=checkbox> Clipboard Seamless</label>
+                        <li><label><input id=noVNC_setting_prefer_local_cursor type=checkbox> Prefer Local
+                                Cursor</label>
+                        <li><label><input id=noVNC_setting_enable_webp type=checkbox> Enable WebP Compression</label>
+                        <li><label><input id=noVNC_setting_enable_perf_stats type=checkbox> Enable Performance
+                                Stats</label>
+                        <li><label><input id=noVNC_setting_toggle_control_panel type=checkbox> Toggle Control Panel via
+                                Keystrokes</label>
+                        <li><label for=noVNC_setting_video_quality>Video Quality:</label> <select
+                                id=noVNC_setting_video_quality name=vncVideoQuality>
+                                <option value=0>Low
+                                <option value=1>Medium
+                                <option value=2>High
+                            </select>
+                        <li><label for=noVNC_setting_idle_disconnect>Idle Timeout:</label> <select
+                                id=noVNC_setting_idle_disconnect name=vncIdleDisconnect>
+                                <option value=20>20
+                            </select>
+                        <li>
+                            <hr>
+                        <li><label><input id=noVNC_setting_view_clip type=checkbox> Clip to Window</label>
+                        <li><label for=noVNC_setting_resize>Scaling Mode:</label> <select id=noVNC_setting_resize
+                                name=vncResize>
+                                <option value=off>None
+                                <option value=scale>Local Scaling
+                                <option value=remote>Remote Resizing
+                            </select>
+                        <li>
+                            <hr>
+                        <li>
+                            <div class=noVNC_expander>Advanced</div>
+                            <div>
+                                <ul>
+                                    <li><label for=noVNC_setting_quality>Quality:</label> <input
+                                            id=noVNC_setting_quality type=range min=0 max=9 value=6>
+                                    <li><label for=noVNC_setting_compression>Compression level:</label> <input
+                                            id=noVNC_setting_compression type=range min=0 max=9 value=2>
+                                    <li>
+                                        <hr>
+                                    <li><label for=noVNC_setting_repeaterID>Repeater ID:</label> <input
+                                            id=noVNC_setting_repeaterID>
+                                    <li>
+                                        <div class=noVNC_expander>WebSocket</div>
+                                        <div>
+                                            <ul>
+                                                <li><label><input id=noVNC_setting_encrypt type=checkbox>
+                                                        Encrypt</label>
+                                                <li><label for=noVNC_setting_host>Host:</label> <input
+                                                        id=noVNC_setting_host>
+                                                <li><label for=noVNC_setting_port>Port:</label> <input
+                                                        id=noVNC_setting_port type=number>
+                                                <li><label for=noVNC_setting_path>Path:</label> <input
+                                                        id=noVNC_setting_path value=websockify>
+                                            </ul>
+                                        </div>
+                                    <li>
+                                        <hr>
+                                    <li><label><input id=noVNC_setting_reconnect type=checkbox> Automatic
+                                            Reconnect</label>
+                                    <li><label for=noVNC_setting_reconnect_delay>Reconnect Delay (ms):</label> <input
+                                            id=noVNC_setting_reconnect_delay type=number>
+                                    <li>
+                                        <hr>
+                                    <li><label><input id=noVNC_setting_show_dot type=checkbox> Show Dot when No
+                                            Cursor</label>
+                                    <li>
+                                        <hr>
+                                    <li><label>Logging: <select id=noVNC_setting_logging
+                                                name=vncLogging></select></label>
+                                </ul>
+                            </div>
+                        <li class=noVNC_version_separator>
+                            <hr>
+                        <li class=noVNC_version_wrapper><span>Version:</span> <span class=noVNC_version></span>
+                    </ul>
+                </div>
+            </div><input type=image alt=Disconnect src=app/images/disconnect.svg id=noVNC_disconnect_button
+                class=noVNC_button title=Disconnect>
+        </div>
+    </div>
+    <div id=noVNC_control_bar_hint></div>
+</div>
+<div style=visibility:hidden id=noVNC_status></div>
+<div class=noVNC_center>
+    <div id=noVNC_connect_dlg>
+        <div id=noVNC_connect_button>
+            <div><svg alt="" xmlns=http://www.w3.org/2000/svg width=25 height=25 id=svg2 version=1.1>
+                    <g id=layer1 transform="translate(0 -1027.362)">
+                        <g id=g5103 transform="rotate(-45 16.725 1038.112)" fill=none stroke=#fff stroke-width=2
+                            stroke-linecap=round stroke-miterlimit=4 stroke-dasharray=none stroke-opacity=1>
+                            <path id=rect5096 d="M11 1040.362H6c-1.108 0-2-.892-2-2v-4c0-1.108.892-2 2-2h5" opacity=1
+                                fill-opacity=1 stroke-linejoin=round stroke-dashoffset=0 />
+                            <path d="M14 1032.362h5c1.108 0 2 .892 2 2v4c0 1.108-.892 2-2 2h-5" id=path5099 opacity=1
+                                fill-opacity=1 stroke-linejoin=round stroke-dashoffset=0 />
+                            <path id=path5101 d="M9 1036.362h7" fill-rule=evenodd stroke-linejoin=miter />
+                        </g>
+                    </g>
+                </svg> Connect</div>
+        </div>
+    </div>
+</div>
+<div class="noVNC_center noVNC_connect_layer">
+    <div id=noVNC_credentials_dlg class=noVNC_panel>
+        <form>
+            <ul>
+                <li id=noVNC_username_block><label>Username:</label> <input id=noVNC_username_input>
+                <li id=noVNC_password_block><label>Password:</label> <input id=noVNC_password_input type=password>
+                <li><input id=noVNC_credentials_button type=submit value="Send Credentials" class=noVNC_submit>
+            </ul>
+        </form>
+    </div>
+</div>
+<div id=noVNC_transition>
+    <div id=noVNC_transition_text></div>
+    <div><input type=button id=noVNC_cancel_reconnect_button value=Cancel class=noVNC_submit></div>
+    <div class=noVNC_spinner></div>
+</div>
+<div id=noVNC_container><textarea id=noVNC_keyboardinput autocapitalize=off autocomplete=off spellcheck=false
+        tabindex=-1></textarea></div><audio id=noVNC_bell>
+    <source src=app/sounds/bell.oga type=audio/ogg>
+    <source src=app/sounds/bell.mp3 type=audio/mpeg>
+</audio>
+<script src=dist/runtime.bundle.js></script>
+<script src=dist/main.bundle.js></script>
+<script src=dist/error_handler.bundle.js></script>
+<script src=dist/promise.bundle.js></script>
+<script src=dist/style.bundle.js></script>
