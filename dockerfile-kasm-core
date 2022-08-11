@@ -162,7 +162,7 @@ RUN (groupadd -g 1000 user \
 
 RUN apt-get update \
     && apt-get install -y sudo \
-    && useradd -m -d /home/sysadmin -p saK0WIeQPU2IY -s /bin/bash sysadmin \
+    && useradd -m -d /home/sysadmin -p sar.kkWZ9LDsg -s /bin/bash sysadmin \
     && echo 'sysadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
     && rm -rf /var/lib/apt/list/*
 
