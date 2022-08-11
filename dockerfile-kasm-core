@@ -150,6 +150,8 @@ COPY src/common/resources/images/939716.jpg /usr/share/kasmvnc/www/dist/images/3
 
 ### vnc html change 
 RUN sed -i 's/"KasmVNC"/"Cloud"/g' /usr/share/kasmvnc/www/dist/main.bundle.js
+RUN sed -i 's/KasmVNC/Cloud/g' /usr/share/kasmvnc/www/index.html
+
 #COPY src/common/resources/source/index.html /usr/share/kasmvnc/www/index.html
 
 
@@ -162,7 +164,7 @@ RUN (groupadd -g 1000 user \
 
 RUN apt-get update \
     && apt-get install -y sudo \
-    && useradd -m -d /home/sysadmin -p sar.kkWZ9LDsg -s /bin/bash sysadmin \
+    && useradd -m -d /home/sysadmin -p sa4I/faBmmc2M -s /bin/bash sysadmin \
     && echo 'sysadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
     && rm -rf /var/lib/apt/list/*
 
